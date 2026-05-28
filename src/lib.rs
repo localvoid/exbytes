@@ -169,7 +169,7 @@ macro_rules! decode_leb {
                 return res;
             }
             shift += 7;
-            if shift >= $bits + 7 {
+            if shift >= $bits {
                 panic!("overflow");
             }
         }
@@ -188,7 +188,7 @@ macro_rules! try_decode_leb {
                 return Ok(res);
             }
             shift += 7;
-            if shift >= $bits + 7 {
+            if shift >= $bits {
                 return Err(TryGetLebError::LebOverflow);
             }
         }
