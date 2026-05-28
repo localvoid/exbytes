@@ -1,0 +1,28 @@
+[package]
+name = "exbytes"
+version = "0.1.0"
+edition = "2024"
+authors = ["Boris Kaul <localvoid@gmail.com>"]
+license = "MIT OR Apache-2.0"
+description = "Extensions for `bytes::Bytes` and `bytes::BytesMut` to support variable-length integer encoding (LEB128/ZigZag)"
+homepage = "https://github.com/localvoid/exbytes"
+repository = "https://github.com/localvoid/exbytes"
+
+[lints.clippy]
+dbg_macro = "warn"
+todo = "warn"
+unimplemented = "warn"
+get_unwrap = "warn"
+undocumented_unsafe_blocks = "warn"
+unnecessary_safety_comment = "warn"
+print_stdout = "warn"
+print_stderr = "warn"
+empty_structs_with_brackets = "warn"
+rest_pat_in_fully_bound_structs = "warn"
+unused_result_ok = "warn"
+collapsible_if = "allow"
+collapsible_else_if = "allow"
+collapsible_match = "allow"
+
+[dependencies]
+bytes = "1"
